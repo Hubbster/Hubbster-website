@@ -1,0 +1,80 @@
+.reveal-modal
+  color: #FFF
+  font-size: 80%
+  height: auto!important
+  & h2
+    color: #FFF
+    font-weight: 100
+    text-align: center
+    font-size: 36px
+    -webkit-font-smoothing: antialiased
+    margin-bottom: 20px
+  input
+    height: 55px
+    &.button
+      background-color: $orange
+      border: none
+
+body.home
+  background-image: url(/img/home-background.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  // background-position: center
+
+
+.home
+
+  h1
+    font-weight: 100
+
+  .leftblock
+    text-align: center
+    color: #FFFFFF
+    @media #{$large-up}
+      position: absolute
+      width: 50%
+      height: 100%
+      top: 0
+    .introduction
+      padding-left: 20px
+      padding-right: 20px
+      @media #{$small-up}
+        margin-top: 50px
+      @media #{$large-up}
+        position: absolute
+        top: 50%
+        width: 100%
+        margin-top: -128px
+      h1
+        color: #FFFFFF
+      p
+        font-weight: 900
+        text-transform: uppercase
+
+      button
+        background-color: $orange
+        border: none
+        border-radius: 40px
+  .rightblock
+    @media #{$large-up}
+      position: absolute
+      width: 62%
+      height: 100%
+      top: 0
+      right: 0
+      z-index: 1
+    img
+      @media #{$large-up}
+        position: absolute
+        bottom: 0
+        right: 0
+  .employees
+    h3
+      color: #FFFFFF
+    span
+      display: block
+  #contactmodal
+    h1
+      color: #FFFFFF
+    .columns
+      padding: 0!important

@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>Hubbster Group</title>
+  </head>
+  <body class="home">
+    <div class="leftblock clearfix">
+      <div class="introduction">
+        <h1 ice:editable="multiline">Put your strategy to work. Today.</h1>
+        <p ice:editable="multiline">MAKES PROGRESS MEASURABLE • PROVIDES REAL TIME FEEDBACK • USER FRIENDLY</p>
+        <button class="button" ice:editable="line" data-reveal-id="presentationmodal">GET A PRESENTATION</button>
+      </div>
+    </div>
+    <div class="blrightock">
+      <img src="/img/desktopmac.png">
+    </div>
+
+    <div id="contactmodal" class="reveal-modal" data-reveal>
+      <h1 ice:editable="multiline">We would love to speak to you!</h1>
+      <div ice:editable="html">
+        <p>For general inqueries, please contact us at info@hubbstergroup.com</p>
+      </div>
+      <div class="row employees">
+        <div class="small-12 large-4 columns" ice:editable="html">
+          <h3>Stockholm</h3>
+            <p>
+              <span>Anna Bloth Karling</span>
+              <span>anna@hubbstergroup.com</span>
+              <span>+46 768 93 62 65</span>
+            </p>
+            <p>
+              <span>Niklas Engström</span>
+              <span>niklas@hubbstergroup.com</span>
+              <span>+46 703 25 41 15</span>
+            </p>
+            <p>
+              <span>Anton Kjörck Lindén</span>
+              <span>anton@hubbstergroup.com</span>
+              <span>+46 735 34 50 22</span>
+            </p>
+        </div>
+        <div class="small-12 large-4 columns" ice:editable="html">
+          <h3>London</h3>
+            <p>
+              <span>Julian Knott</span>
+              <span>julian@hubbstergroup.com</span>
+              <span>+44 7930 400 721</span>
+            </p>
+            <p>
+              <span>Angus MacDonald</span>
+              <span>angus@hubbstergroup.com</span>
+              <span>+44 7712 922 505</span>
+            </p>          
+        </div>
+        <div class="small-12 large-4 columns" ice:editable="html">
+          <h3>Port Elizabeth</h3>
+            <p>
+              <span>Torquil Mathewson</span>
+              <span>torquil@hubbstergroup.com</span>
+              <span>+27 720 36 46 39</span>
+            </p>     
+        </div>
+      </div>
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
+
+    <div id="presentationmodal" class="reveal-modal small" data-reveal>
+      <h2>Get the presentation</h2>
+      <div id="message" style="display: none;"></div>
+      <form id="contact_form" name="catwebformform91974" method="post" onsubmit="return checkWholeForm91974(this)" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=10090&OID={module_oid}&OTYPE={module_otype}&EID={module_eid}&CID={module_cid}&JSON=1">
+        <div class="row">
+          <input type="text" placeholder="Email" name="EmailAddress" id="EmailAddress">
+        </div>
+        <div class="row">
+          <input type="text" placeholder="Phone number" name="CellPhone" id="CellPhone">
+        </div>
+        <div class="row">
+          <input type="submit" class="button" value="Send" id="submitpresentation">
+        </div>
+        <script type="text/javascript" src="http://hubbstergroup.businesscatalyst.com/CatalystScripts/ValidationFunctions.js"></script><script type="text/javascript">
+        //<![CDATA[
+        var submitcount91974 = 0;function checkWholeForm91974(theForm){var why = "";if (theForm.CellPhone) why += isEmpty(theForm.CellPhone.value, "Phone number"); if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value); if(why != ""){alert(why);return false;}if(submitcount91974 == 0){submitcount91974++;jqsub();return false;}else{alert("Sending request...");return false;}}
+        //]]>
+        </script>
+      </form>
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
+  </body>
+</html>

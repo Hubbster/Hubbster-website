@@ -1,0 +1,44 @@
+.home
+  .top-bar,
+  .top-bar-section ul,
+  .top-bar-section a,
+    background: transparent!important
+  .top-bar.expanded .title-area
+    background-color: #FFFFFF
+  .top-bar
+    position: relative
+    z-index: 89
+  .navwrap
+    @media #{$medium-up}
+      padding: 20px
+    @media #{$large-up}
+      padding: 40px
+    @media #{$xlarge-up}
+      padding: 60px
+    nav section li
+      @media #{$small-only}
+        background: #FFFFFF
+        a
+          color: #000000
+          text-align: center
+  .login
+    @media #{$medium-up}
+      margin-left: 13px
+      border-radius: 20px
+      background-color: rgba(0,0,0,0.25)
+      a
+        padding: 0 25px!important
+
+  ul.menu li
+    @media #{$small-only}
+      border-bottom: 1px solid #EAEAEA
+  ul.title-area
+    @media #{$small-only}
+      border-bottom: 1px #DBDAD6 solid
+
+  .top-bar.expanded .toggle-topbar a
+    color: #000000
+
+  .top-bar.expanded .toggle-topbar a::after
+    -webkit-box-shadow: 1px 10px 1px 1px #000, 1px 16px 1px 1px #000, 1px 22px 1px 1px #000
+    box-shadow: 0 10px 0 1px #000, 0 16px 0 1px #000, 0 22px 0 1px #000

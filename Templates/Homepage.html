@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hubbster Group</title>
+    <link rel="stylesheet" href="/stylesheets/app.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+  </head>
+  <body>
+  <div class="navwrap">
+    <nav class="top-bar" data-topbar data-options="is_hover: false">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="/"><img src="/img/logo-black-symbol.svg"></a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right menu">
+          <li><a href="#" data-reveal-id="contactmodal">CONTACT</a></li>
+          <li><a href="http://myaccount.zendesk.com/account/dropboxes/20238961" onClick="script: Zenbox.show(); return false;">SUPPORT</a></li>
+          <li class="login"><a href="http://www.corehub.se">LOG IN</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+
+    {tag_pagecontent}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.2.1/js/foundation.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script>
+      $(document).ready(function() {
+          var hash = document.location.hash.substring(1);
+          $(".reveal-modal").each(function() {
+              if($(this).attr("id") === hash) {
+                  $(this).foundation("reveal","open");
+              }
+          });
+      });
+    </script>
+    <script type="text/javascript">
+      function jqsub() {
+
+      var $f = $('#contact_form');
+      var $m = $('#message');
+      $.ajax({
+        type: 'POST',
+        url: $f.attr('action') + '&amp;JSON=1',
+        data: $f.serialize(),
+          success: function(msg) {
+          var formResponse = eval(msg); // This line evaluates the JSON data and converts it to JSON object. In older version of jQuery you will have to evaluate JSON object as a string.
+              if (formResponse.FormProcessV2Response.success) { 
+                      $m.addClass('success').fadeIn().html("<p>Thank you for your interest in Hubbster and our products. We've email you some one-pagers with more information.</p>"); 
+                      $f.fadeOut(); //Hide the form
+              }
+          },
+          error: function(msg) {
+          alert('error'+msg);
+          return false;
+          }
+      });
+      }
+    </script>
+    </script>
+    <script type="text/javascript" src="//assets.zendesk.com/external/zenbox/v2.6/zenbox.js"></script>
+    <style type="text/css" media="screen, projection">
+      @import url(//assets.zendesk.com/external/zenbox/v2.6/zenbox.css);
+    </style>
+    <script type="text/javascript">
+      if (typeof(Zenbox) !== "undefined") {
+        Zenbox.init({
+          dropboxID:   "20238961",
+          url:         "https://hubbstergroup.zendesk.com",
+          tabTooltip:  "Questions",
+          tabImageURL: "https://assets.zendesk.com/external/zenbox/images/tab_questions_right.png",
+          tabColor:    "black",
+          tabPosition: "Right",
+          hide_tab:   "true"
+        });
+      }
+    </script>
+  </body>
+</html>
